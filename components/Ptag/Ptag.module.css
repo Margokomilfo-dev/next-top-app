@@ -1,0 +1,16 @@
+.p {
+    color: var(--black);
+    margin: 0;
+}
+.p14 {
+    font-size: 14px;
+    line-height: 24px;
+}
+.p16 {
+    font-size: 16px;
+    line-height: 24px;
+}
+.p18 {
+    font-size: 18px;
+    line-height: 29px;
+}

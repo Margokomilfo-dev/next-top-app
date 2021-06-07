@@ -7,7 +7,7 @@ import ArrowIcon from './arrow.svg'
 // 1) из public <img src="/image.svg">
 // 2) добавить в вебпак поднадстройку (создать next.config.ts) и текст в next-env.d.ts, + yarn add @svgr/webpack
 
-interface ButtonProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>{
+interface ButtonProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
     children: ReactNode;
     appearance: 'primary' | 'ghost'
     arrow?: 'right' | 'down' | 'none'
@@ -18,7 +18,7 @@ interface ButtonProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonE
 
 export const Button = ({children, arrow = 'none', appearance, className, ...props}: ButtonProps): JSX.Element => {
     return <button
-        className={ cn (s.button, className, {
+        className={cn(s.button, className, {
             [s.primary]: appearance === 'primary',
             [s.ghost]: appearance === 'ghost'
         })}{...props} >
